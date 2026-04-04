@@ -39,8 +39,7 @@ lvgl:
                   widgets:
                     - label:
                         id: icon_${uid}
-                        align: center
-                        x: -18
+                        align: left_mid
                         y: -8
                         text_font: mdi_24
                         text_color: $color_primary
@@ -48,8 +47,7 @@ lvgl:
 
                     - label:
                         id: temp_${uid}
-                        align: center
-                        x: 12
+                        align: right_mid
                         y: -8
                         text_color: $color_text
                         text: "--°"
