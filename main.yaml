@@ -176,6 +176,70 @@ packages:
 
 
   # -------------------------------------------
+  # Page 3 — power monitor
+  # -------------------------------------------
+
+  p3_power1: !include
+    file: buttons/power_display_large.yaml
+    vars:
+      uid:       p3_power1
+      page_id:   page_3
+      x:         $grid_col_0
+      y:         $grid_row_4
+      text:      "Garage 1"
+      entity_id: "sensor.xiao_2_channel_wi_fi_ac_energy_meter_106814_bl0939_active_power_1"
+
+  p3_power2: !include
+    file: buttons/power_display_large.yaml
+    vars:
+      uid:       p3_power2
+      page_id:   page_3
+      x:         $grid_col_2
+      y:         $grid_row_4
+      text:      "Old House 1"
+      entity_id: "sensor.xiao_2_channel_wi_fi_ac_energy_meter_b5fb5c_bl0939_active_power_1"
+
+  p3_power3: !include
+    file: buttons/power_display_large.yaml
+    vars:
+      uid:       p3_power3
+      page_id:   page_3
+      x:         $grid_col_4
+      y:         $grid_row_4
+      text:      "Main House 1"
+      entity_id: "sensor.xiao_2_channel_wi_fi_ac_energy_meter_b5fc18_bl0939_active_power_1"
+
+  p3_power4: !include
+    file: buttons/power_display_large.yaml
+    vars:
+      uid:       p3_power4
+      page_id:   page_3
+      x:         $grid_col_0
+      y:         $grid_row_5
+      text:      "Garage 2"
+      entity_id: "sensor.xiao_2_channel_wi_fi_ac_energy_meter_106814_bl0939_active_power_2"
+
+  p3_power5: !include
+    file: buttons/power_display_large.yaml
+    vars:
+      uid:       p3_power5
+      page_id:   page_3
+      x:         $grid_col_2
+      y:         $grid_row_5
+      text:      "Old House 2"
+      entity_id: "sensor.xiao_2_channel_wi_fi_ac_energy_meter_b5fb5c_bl0939_active_power_2"
+
+  p3_power6: !include
+    file: buttons/power_display_large.yaml
+    vars:
+      uid:       p3_power6
+      page_id:   page_3
+      x:         $grid_col_4
+      y:         $grid_row_5
+      text:      "Main House 2"
+      entity_id: "sensor.xiao_2_channel_wi_fi_ac_energy_meter_b5fc18_bl0939_active_power_2"
+
+  # -------------------------------------------
   # Page 6 — test fill (6×5 grid)
   # -------------------------------------------
   p6_r1c0: !include
