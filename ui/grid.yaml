@@ -1,0 +1,37 @@
+---
+# Grid layout constants.
+#
+# 6×5 button matrix of 80×80px cells:
+#   - 6×80 = 480px fills full width with no margins
+#   - 40px status bar (top) + 5×80 = 400px content + 40px tab bar (bottom) = 480px total
+#   - Tab bar height = 40px = half of cell size (80px)
+#   - 8px visual gap between buttons comes from pad_all: 4 on each container
+#
+# Use these substitutions as x/y vars when including a button package:
+#
+#   my_button: !include
+#     file: buttons/switch_button.yaml
+#     vars:
+#       uid:       my_button
+#       page_id:   page_1
+#       x:         $grid_col_0
+#       y:         $grid_row_1
+#       ...
+
+substitutions:
+  grid_cell_size: "80"
+
+  # Column x-positions (left edge of each cell, 0–5)
+  grid_col_0: "0"
+  grid_col_1: "80"
+  grid_col_2: "160"
+  grid_col_3: "240"
+  grid_col_4: "320"
+  grid_col_5: "400"
+
+  # Row y-positions (top edge of each content row, below 40px status bar)
+  grid_row_1: "40"
+  grid_row_2: "120"
+  grid_row_3: "200"
+  grid_row_4: "280"
+  grid_row_5: "360"

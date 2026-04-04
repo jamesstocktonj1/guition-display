@@ -4,15 +4,11 @@
 # Required vars:
 #   uid:       Unique ID, no spaces (e.g. kitchen_light). Must be unique per button.
 #   page_id:   Target page (page_1 … page_6)
-#   row:       Grid row (1–5). Row 0 is reserved for the tab bar.
-#   column:    Grid column (0–5)
+#   x:         Horizontal position (use $grid_col_0 … $grid_col_4)
+#   y:         Vertical position   (use $grid_row_1 … $grid_row_5)
 #   text:      Label shown on the button
-#   icon:      Icon character (e.g. "\uF335" for mdi:lightbulb)
+#   icon:      Icon character (e.g. $icon_lightbulb)
 #   entity_id: Home Assistant entity ID to toggle (light.*, switch.*, etc.)
-#
-# Optional vars:
-#   row_span:    default 1
-#   column_span: default 1
 
 lvgl:
   pages:
@@ -20,12 +16,10 @@ lvgl:
       widgets:
         - container:
             id: ${uid}
-            grid_cell_row_pos: ${row}
-            grid_cell_column_pos: ${column}
-            grid_cell_row_span: ${row_span | default(1)}
-            grid_cell_column_span: ${column_span | default(1)}
-            grid_cell_x_align: stretch
-            grid_cell_y_align: stretch
+            x: ${x}
+            y: ${y}
+            width: $grid_cell_size
+            height: $grid_cell_size
             bg_opa: 0
             border_width: 0
             pad_all: 4

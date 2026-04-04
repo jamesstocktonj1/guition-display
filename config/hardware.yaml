@@ -28,6 +28,29 @@ font:
     ]
 
 # -------------------------------------------
+# Time (synced from Home Assistant)
+# -------------------------------------------
+time:
+  - platform: homeassistant
+    id: ha_time
+    on_time_sync:
+      - lvgl.label.update:
+          id: status_time
+          text: !lambda 'return id(ha_time).now().strftime("%H:%M");'
+      - lvgl.label.update:
+          id: status_date
+          text: !lambda 'return id(ha_time).now().strftime("%a %d %b");'
+    on_time:
+      - seconds: 0
+        then:
+          - lvgl.label.update:
+              id: status_time
+              text: !lambda 'return id(ha_time).now().strftime("%H:%M");'
+          - lvgl.label.update:
+              id: status_date
+              text: !lambda 'return id(ha_time).now().strftime("%a %d %b");'
+
+# -------------------------------------------
 # Backlight
 # -------------------------------------------
 output:

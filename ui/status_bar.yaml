@@ -1,0 +1,27 @@
+# Status bar — top 40px strip showing time (left) and date (right).
+# Sits in the LVGL top_layer so it persists across all pages.
+obj:
+  x: 0
+  y: 0
+  width: 480
+  height: 40
+  bg_color: $color_bg
+  border_width: 0
+  pad_left: 12
+  pad_right: 12
+  pad_top: 0
+  pad_bottom: 0
+  radius: 0
+
+  widgets:
+    - label:
+        id: status_time
+        align: left_mid
+        text_color: $color_text
+        text: "--:--"
+
+    - label:
+        id: status_date
+        align: right_mid
+        text_color: $color_text_muted
+        text: "--- -- ---"

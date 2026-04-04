@@ -6,7 +6,7 @@ esphome:
 
 # -------------------------------------------
 # Theme overrides (optional)
-# Any substitution defined here takes precedence over config/theme.yaml.
+# Any substitution defined here takes precedence over ui/theme.yaml.
 # e.g. to change the primary accent colour:
 #   substitutions:
 #     color_primary: "0x00AA88"
@@ -16,6 +16,7 @@ packages:
   hardware: !include config/hardware.yaml
   wifi:     !include config/wifi.yaml
   theme:    !include ui/theme.yaml
+  grid:     !include ui/grid.yaml
   # -------------------------------------------
   # Buttons
   # -------------------------------------------
@@ -24,8 +25,8 @@ packages:
     vars:
       uid:       table_lamp
       page_id:   page_1
-      row:       1
-      column:    0
+      x:         $grid_col_0
+      y:         $grid_row_1
       text:      "Table Lamp"
       icon:      $icon_lightbulb
       entity_id: "light.table_lamp"
@@ -35,8 +36,8 @@ packages:
     vars:
       uid:       james_temp
       page_id:   page_1
-      row:       1
-      column:    1
+      x:         $grid_col_1
+      y:         $grid_row_5
       text:      "James"
       entity_id: "climate.james"
 
@@ -45,76 +46,376 @@ packages:
     vars:
       uid:       ac_power_1
       page_id:   page_1
-      row:       1
-      column:    2
+      x:         $grid_col_2
+      y:         $grid_row_1
       text:      "AC Power"
       entity_id: "sensor.xiao_2_channel_wi_fi_ac_energy_meter_106814_bl0939_active_power_1"
 
+  # -------------------------------------------
+  # Page 6 — test fill (6×5 grid)
+  # -------------------------------------------
+  p6_r1c0: !include
+    file: buttons/switch_button.yaml
+    vars:
+      uid: p6_r1c0
+      page_id: page_6
+      x: $grid_col_0
+      y: $grid_row_1
+      text: "Button 1"
+      icon: $icon_lightbulb
+      entity_id: "switch.test_1"
+
+  p6_r1c1: !include
+    file: buttons/switch_button.yaml
+    vars:
+      uid: p6_r1c1
+      page_id: page_6
+      x: $grid_col_1
+      y: $grid_row_1
+      text: "Button 2"
+      icon: $icon_lightbulb
+      entity_id: "switch.test_2"
+
+  p6_r1c2: !include
+    file: buttons/switch_button.yaml
+    vars:
+      uid: p6_r1c2
+      page_id: page_6
+      x: $grid_col_2
+      y: $grid_row_1
+      text: "Button 3"
+      icon: $icon_lightbulb
+      entity_id: "switch.test_3"
+
+  p6_r1c3: !include
+    file: buttons/switch_button.yaml
+    vars:
+      uid: p6_r1c3
+      page_id: page_6
+      x: $grid_col_3
+      y: $grid_row_1
+      text: "Button 4"
+      icon: $icon_lightbulb
+      entity_id: "switch.test_4"
+
+  p6_r1c4: !include
+    file: buttons/switch_button.yaml
+    vars:
+      uid: p6_r1c4
+      page_id: page_6
+      x: $grid_col_4
+      y: $grid_row_1
+      text: "Button 5"
+      icon: $icon_lightbulb
+      entity_id: "switch.test_5"
+
+  p6_r1c5: !include
+    file: buttons/switch_button.yaml
+    vars:
+      uid: p6_r1c5
+      page_id: page_6
+      x: $grid_col_5
+      y: $grid_row_1
+      text: "Button 6"
+      icon: $icon_lightbulb
+      entity_id: "switch.test_6"
+
+  p6_r2c0: !include
+    file: buttons/switch_button.yaml
+    vars:
+      uid: p6_r2c0
+      page_id: page_6
+      x: $grid_col_0
+      y: $grid_row_2
+      text: "Button 7"
+      icon: $icon_lightbulb
+      entity_id: "switch.test_7"
+
+  p6_r2c1: !include
+    file: buttons/switch_button.yaml
+    vars:
+      uid: p6_r2c1
+      page_id: page_6
+      x: $grid_col_1
+      y: $grid_row_2
+      text: "Button 8"
+      icon: $icon_lightbulb
+      entity_id: "switch.test_8"
+
+  p6_r2c2: !include
+    file: buttons/switch_button.yaml
+    vars:
+      uid: p6_r2c2
+      page_id: page_6
+      x: $grid_col_2
+      y: $grid_row_2
+      text: "Button 9"
+      icon: $icon_lightbulb
+      entity_id: "switch.test_9"
+
+  p6_r2c3: !include
+    file: buttons/switch_button.yaml
+    vars:
+      uid: p6_r2c3
+      page_id: page_6
+      x: $grid_col_3
+      y: $grid_row_2
+      text: "Button 10"
+      icon: $icon_lightbulb
+      entity_id: "switch.test_10"
+
+  p6_r2c4: !include
+    file: buttons/switch_button.yaml
+    vars:
+      uid: p6_r2c4
+      page_id: page_6
+      x: $grid_col_4
+      y: $grid_row_2
+      text: "Button 11"
+      icon: $icon_lightbulb
+      entity_id: "switch.test_11"
+
+  p6_r2c5: !include
+    file: buttons/switch_button.yaml
+    vars:
+      uid: p6_r2c5
+      page_id: page_6
+      x: $grid_col_5
+      y: $grid_row_2
+      text: "Button 12"
+      icon: $icon_lightbulb
+      entity_id: "switch.test_12"
+
+  p6_r3c0: !include
+    file: buttons/switch_button.yaml
+    vars:
+      uid: p6_r3c0
+      page_id: page_6
+      x: $grid_col_0
+      y: $grid_row_3
+      text: "Button 13"
+      icon: $icon_lightbulb
+      entity_id: "switch.test_13"
+
+  p6_r3c1: !include
+    file: buttons/switch_button.yaml
+    vars:
+      uid: p6_r3c1
+      page_id: page_6
+      x: $grid_col_1
+      y: $grid_row_3
+      text: "Button 14"
+      icon: $icon_lightbulb
+      entity_id: "switch.test_14"
+
+  p6_r3c2: !include
+    file: buttons/switch_button.yaml
+    vars:
+      uid: p6_r3c2
+      page_id: page_6
+      x: $grid_col_2
+      y: $grid_row_3
+      text: "Button 15"
+      icon: $icon_lightbulb
+      entity_id: "switch.test_15"
+
+  p6_r3c3: !include
+    file: buttons/switch_button.yaml
+    vars:
+      uid: p6_r3c3
+      page_id: page_6
+      x: $grid_col_3
+      y: $grid_row_3
+      text: "Button 16"
+      icon: $icon_lightbulb
+      entity_id: "switch.test_16"
+
+  p6_r3c4: !include
+    file: buttons/switch_button.yaml
+    vars:
+      uid: p6_r3c4
+      page_id: page_6
+      x: $grid_col_4
+      y: $grid_row_3
+      text: "Button 17"
+      icon: $icon_lightbulb
+      entity_id: "switch.test_17"
+
+  p6_r3c5: !include
+    file: buttons/switch_button.yaml
+    vars:
+      uid: p6_r3c5
+      page_id: page_6
+      x: $grid_col_5
+      y: $grid_row_3
+      text: "Button 18"
+      icon: $icon_lightbulb
+      entity_id: "switch.test_18"
+
+  p6_r4c0: !include
+    file: buttons/switch_button.yaml
+    vars:
+      uid: p6_r4c0
+      page_id: page_6
+      x: $grid_col_0
+      y: $grid_row_4
+      text: "Button 19"
+      icon: $icon_lightbulb
+      entity_id: "switch.test_19"
+
+  p6_r4c1: !include
+    file: buttons/switch_button.yaml
+    vars:
+      uid: p6_r4c1
+      page_id: page_6
+      x: $grid_col_1
+      y: $grid_row_4
+      text: "Button 20"
+      icon: $icon_lightbulb
+      entity_id: "switch.test_20"
+
+  p6_r4c2: !include
+    file: buttons/switch_button.yaml
+    vars:
+      uid: p6_r4c2
+      page_id: page_6
+      x: $grid_col_2
+      y: $grid_row_4
+      text: "Button 21"
+      icon: $icon_lightbulb
+      entity_id: "switch.test_21"
+
+  p6_r4c3: !include
+    file: buttons/switch_button.yaml
+    vars:
+      uid: p6_r4c3
+      page_id: page_6
+      x: $grid_col_3
+      y: $grid_row_4
+      text: "Button 22"
+      icon: $icon_lightbulb
+      entity_id: "switch.test_22"
+
+  p6_r4c4: !include
+    file: buttons/switch_button.yaml
+    vars:
+      uid: p6_r4c4
+      page_id: page_6
+      x: $grid_col_4
+      y: $grid_row_4
+      text: "Button 23"
+      icon: $icon_lightbulb
+      entity_id: "switch.test_23"
+
+  p6_r4c5: !include
+    file: buttons/switch_button.yaml
+    vars:
+      uid: p6_r4c5
+      page_id: page_6
+      x: $grid_col_5
+      y: $grid_row_4
+      text: "Button 24"
+      icon: $icon_lightbulb
+      entity_id: "switch.test_24"
+
+  p6_r5c0: !include
+    file: buttons/switch_button.yaml
+    vars:
+      uid: p6_r5c0
+      page_id: page_6
+      x: $grid_col_0
+      y: $grid_row_5
+      text: "Button 25"
+      icon: $icon_lightbulb
+      entity_id: "switch.test_25"
+
+  p6_r5c1: !include
+    file: buttons/switch_button.yaml
+    vars:
+      uid: p6_r5c1
+      page_id: page_6
+      x: $grid_col_1
+      y: $grid_row_5
+      text: "Button 26"
+      icon: $icon_lightbulb
+      entity_id: "switch.test_26"
+
+  p6_r5c2: !include
+    file: buttons/switch_button.yaml
+    vars:
+      uid: p6_r5c2
+      page_id: page_6
+      x: $grid_col_2
+      y: $grid_row_5
+      text: "Button 27"
+      icon: $icon_lightbulb
+      entity_id: "switch.test_27"
+
+  p6_r5c3: !include
+    file: buttons/switch_button.yaml
+    vars:
+      uid: p6_r5c3
+      page_id: page_6
+      x: $grid_col_3
+      y: $grid_row_5
+      text: "Button 28"
+      icon: $icon_lightbulb
+      entity_id: "switch.test_28"
+
+  p6_r5c4: !include
+    file: buttons/switch_button.yaml
+    vars:
+      uid: p6_r5c4
+      page_id: page_6
+      x: $grid_col_4
+      y: $grid_row_5
+      text: "Button 29"
+      icon: $icon_lightbulb
+      entity_id: "switch.test_29"
+
+  p6_r5c5: !include
+    file: buttons/switch_button.yaml
+    vars:
+      uid: p6_r5c5
+      page_id: page_6
+      x: $grid_col_5
+      y: $grid_row_5
+      text: "Button 30"
+      icon: $icon_lightbulb
+      entity_id: "switch.test_30"
+
 # -------------------------------------------
-# LVGL pages — 6×6 grid of 80 px tiles
-#
-# Row 0    → tab bar  (shared via !include ui/tab_bar.yaml)
-# Rows 1–5 → button content added by packages above
-# Cols 0–5 → six columns across the 480 px display
+# LVGL pages — plain backgrounds, no grid layout.
+# Status bar and tab bar live in top_layer (persistent across all pages).
+# Row/column positions come from ui/grid.yaml substitutions.
 # -------------------------------------------
 lvgl:
+  top_layer:
+    widgets:
+      - !include ui/status_bar.yaml
+      - !include ui/tab_bar.yaml
+
   pages:
     - id: page_1
       bg_color: $color_bg
       pad_all: 0
-      layout:
-        type: grid
-        grid_columns: [80, 80, 80, 80, 80, 80]
-        grid_rows:    [80, 80, 80, 80, 80, 80]
-      widgets:
-        - !include ui/tab_bar.yaml
 
     - id: page_2
       bg_color: $color_bg
       pad_all: 0
-      layout:
-        type: grid
-        grid_columns: [80, 80, 80, 80, 80, 80]
-        grid_rows:    [80, 80, 80, 80, 80, 80]
-      widgets:
-        - !include ui/tab_bar.yaml
 
     - id: page_3
       bg_color: $color_bg
       pad_all: 0
-      layout:
-        type: grid
-        grid_columns: [80, 80, 80, 80, 80, 80]
-        grid_rows:    [80, 80, 80, 80, 80, 80]
-      widgets:
-        - !include ui/tab_bar.yaml
 
     - id: page_4
       bg_color: $color_bg
       pad_all: 0
-      layout:
-        type: grid
-        grid_columns: [80, 80, 80, 80, 80, 80]
-        grid_rows:    [80, 80, 80, 80, 80, 80]
-      widgets:
-        - !include ui/tab_bar.yaml
 
     - id: page_5
       bg_color: $color_bg
       pad_all: 0
-      layout:
-        type: grid
-        grid_columns: [80, 80, 80, 80, 80, 80]
-        grid_rows:    [80, 80, 80, 80, 80, 80]
-      widgets:
-        - !include ui/tab_bar.yaml
 
     - id: page_6
       bg_color: $color_bg
       pad_all: 0
-      layout:
-        type: grid
-        grid_columns: [80, 80, 80, 80, 80, 80]
-        grid_rows:    [80, 80, 80, 80, 80, 80]
-      widgets:
-        - !include ui/tab_bar.yaml

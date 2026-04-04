@@ -1,11 +1,11 @@
-# Tab bar — no flex layout. Each tab button is absolutely positioned at x = col * 80.
-# This eliminates the inter-item gap that flex adds by default, which was
-# pushing tab 6 off the right edge of the screen.
+# Tab bar — absolutely positioned at the bottom of the screen.
+# Each tab button is at x = col * 80, filling the full 480px width.
+# Sits in the LVGL top_layer so it persists across all pages.
 obj:
-  grid_cell_row_pos: 0
-  grid_cell_column_pos: 0
-  grid_cell_y_align: stretch
+  x: 0
+  y: 440
   width: 480
+  height: 40
   bg_color: $color_bg
   border_width: 0
   pad_all: 0
@@ -16,7 +16,7 @@ obj:
         x: 0
         y: 0
         width: 80
-        height: 80
+        height: 40
         bg_opa: 0
         border_width: 0
         pad_all: 4
@@ -39,7 +39,7 @@ obj:
         x: 80
         y: 0
         width: 80
-        height: 80
+        height: 40
         bg_opa: 0
         border_width: 0
         pad_all: 4
@@ -62,7 +62,7 @@ obj:
         x: 160
         y: 0
         width: 80
-        height: 80
+        height: 40
         bg_opa: 0
         border_width: 0
         pad_all: 4
@@ -85,7 +85,7 @@ obj:
         x: 240
         y: 0
         width: 80
-        height: 80
+        height: 40
         bg_opa: 0
         border_width: 0
         pad_all: 4
@@ -108,7 +108,7 @@ obj:
         x: 320
         y: 0
         width: 80
-        height: 80
+        height: 40
         bg_opa: 0
         border_width: 0
         pad_all: 4
@@ -131,7 +131,7 @@ obj:
         x: 400
         y: 0
         width: 80
-        height: 80
+        height: 40
         bg_opa: 0
         border_width: 0
         pad_all: 4
