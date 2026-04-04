@@ -30,8 +30,8 @@ substitutions:
   grid_col_5: "400"
 
   # Row y-positions (top edge of each content row, below 40px status bar)
-  grid_row_1: "40"
-  grid_row_2: "120"
-  grid_row_3: "200"
-  grid_row_4: "280"
-  grid_row_5: "360"
+  grid_row_1: "30"
+  grid_row_2: "110"
+  grid_row_3: "190"
+  grid_row_4: "270"
+  grid_row_5: "350"
