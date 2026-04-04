@@ -1,13 +1,13 @@
 ---
-# Temperature display — reads current_temperature from a HA climate entity.
+# Power monitoring display — reads current power from a HA sensor entity.
 #
 # Required vars:
-#   uid:       Unique ID, no spaces (e.g. living_room_temp)
+#   uid:       Unique ID, no spaces (e.g. kitchen_power)
 #   page_id:   Target page (page_1 … page_6)
 #   row:       Grid row (1–5). Row 0 is reserved for the tab bar.
 #   column:    Grid column (0–5)
-#   text:      Room name shown at the bottom
-#   entity_id: Home Assistant climate entity (climate.*)
+#   text:      Device/room name shown at the bottom
+#   entity_id: Home Assistant sensor entity reporting watts (sensor.*)
 #
 # Optional vars:
 #   row_span:    default 1
@@ -43,14 +43,14 @@ lvgl:
                         y: -8
                         text_font: $icon_font
                         text_color: $color_primary
-                        text: $icon_thermometer
+                        text: $icon_flash
 
                     - label:
-                        id: temp_${uid}
+                        id: power_${uid}
                         align: right_mid
                         y: -8
                         text_color: $color_text
-                        text: "--°"
+                        text: "--W"
 
                     - label:
                         id: label_${uid}
@@ -65,10 +65,11 @@ sensor:
   - id: sensor_${uid}
     platform: homeassistant
     entity_id: ${entity_id}
-    attribute: current_temperature
+    filters:
+      - filter_out: nan
     on_value:
       - lvgl.label.update:
-          id: temp_${uid}
+          id: power_${uid}
           text:
-            format: "%.1f°"
+            format: "%.0fW"
             args: [x]

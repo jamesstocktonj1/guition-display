@@ -47,3 +47,17 @@ substitutions:
   btn_secondary_on:       "0x1976D2"   # color_secondary (medium blue)
   btn_secondary_icon_on:  "0xFFFFFF"   # white
   btn_secondary_label_on: "0xFFFFFF"   # white
+
+  # -------------------------------------------
+  # Icon font
+  # Override icon_font in main.yaml to swap to a different size.
+  # -------------------------------------------
+  icon_font: mdi_16
+
+  # -------------------------------------------
+  # Icon aliases — use these instead of raw unicode codepoints.
+  # Add new entries here as you add glyphs to config/hardware.yaml.
+  # -------------------------------------------
+  icon_lightbulb:   "\U000F0335"
+  icon_thermometer: "\U000F050F"
+  icon_flash:       "\U000F0241"

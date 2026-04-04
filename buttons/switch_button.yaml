@@ -40,7 +40,7 @@ lvgl:
                     - label:
                         id: icon_${uid}
                         align: top_mid
-                        text_font: mdi_24
+                        text_font: $icon_font
                         text: ${icon}
 
                     - label:

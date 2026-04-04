@@ -27,7 +27,7 @@ packages:
       row:       1
       column:    0
       text:      "Table Lamp"
-      icon:      "\U000F0335"
+      icon:      $icon_lightbulb
       entity_id: "light.table_lamp"
 
   james_temp: !include
@@ -39,6 +39,16 @@ packages:
       column:    1
       text:      "James"
       entity_id: "climate.james"
+
+  ac_power_1: !include
+    file: buttons/power_display.yaml
+    vars:
+      uid:       ac_power_1
+      page_id:   page_1
+      row:       1
+      column:    2
+      text:      "AC Power"
+      entity_id: "sensor.xiao_2_channel_wi_fi_ac_energy_meter_106814_bl0939_active_power_1"
 
 # -------------------------------------------
 # LVGL pages — 6×6 grid of 80 px tiles
