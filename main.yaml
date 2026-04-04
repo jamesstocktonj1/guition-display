@@ -30,6 +30,16 @@ packages:
       icon:      "\U000F0335"
       entity_id: "light.table_lamp"
 
+  james_temp: !include
+    file: buttons/temp_display.yaml
+    vars:
+      uid:       james_temp
+      page_id:   page_1
+      row:       1
+      column:    1
+      text:      "James"
+      entity_id: "climate.james"
+
 # -------------------------------------------
 # LVGL pages — 6×6 grid of 80 px tiles
 #
