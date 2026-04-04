@@ -1,0 +1,102 @@
+---
+esphome:
+  name: guition-display
+  friendly_name: Guition Display
+  min_version: 2026.3.0
+
+# -------------------------------------------
+# Button colour scheme
+# -------------------------------------------
+substitutions:
+  button_on_color:  "0xFF6600"  # orange
+  button_off_color: "0x222222"  # dark grey
+  icon_on_color:    "0xFFFF00"  # yellow
+  icon_off_color:   "0x888888"  # grey
+  label_on_color:   "0xFFFFFF"  # white
+  label_off_color:  "0x888888"  # grey
+
+packages:
+  hardware: !include config/hardware.yaml
+  wifi:     !include config/wifi.yaml
+  # -------------------------------------------
+  # Buttons
+  # -------------------------------------------
+  table_lamp: !include
+    file: buttons/switch_button.yaml
+    vars:
+      uid:       table_lamp
+      page_id:   page_1
+      row:       1
+      column:    0
+      text:      "Table Lamp"
+      icon:      "\U000F0335"
+      entity_id: "light.table_lamp"
+
+# -------------------------------------------
+# LVGL pages — 6×6 grid of 80 px tiles
+#
+# Row 0    → tab bar  (shared via !include ui/tab_bar.yaml)
+# Rows 1–5 → button content added by packages above
+# Cols 0–5 → six columns across the 480 px display
+# -------------------------------------------
+lvgl:
+  pages:
+    - id: page_1
+      bg_color: 0x000000
+      pad_all: 0
+      layout:
+        type: grid
+        grid_columns: [80, 80, 80, 80, 80, 80]
+        grid_rows:    [80, 80, 80, 80, 80, 80]
+      widgets:
+        - !include ui/tab_bar.yaml
+
+    - id: page_2
+      bg_color: 0x000000
+      pad_all: 0
+      layout:
+        type: grid
+        grid_columns: [80, 80, 80, 80, 80, 80]
+        grid_rows:    [80, 80, 80, 80, 80, 80]
+      widgets:
+        - !include ui/tab_bar.yaml
+
+    - id: page_3
+      bg_color: 0x000000
+      pad_all: 0
+      layout:
+        type: grid
+        grid_columns: [80, 80, 80, 80, 80, 80]
+        grid_rows:    [80, 80, 80, 80, 80, 80]
+      widgets:
+        - !include ui/tab_bar.yaml
+
+    - id: page_4
+      bg_color: 0x000000
+      pad_all: 0
+      layout:
+        type: grid
+        grid_columns: [80, 80, 80, 80, 80, 80]
+        grid_rows:    [80, 80, 80, 80, 80, 80]
+      widgets:
+        - !include ui/tab_bar.yaml
+
+    - id: page_5
+      bg_color: 0x000000
+      pad_all: 0
+      layout:
+        type: grid
+        grid_columns: [80, 80, 80, 80, 80, 80]
+        grid_rows:    [80, 80, 80, 80, 80, 80]
+      widgets:
+        - !include ui/tab_bar.yaml
+
+    - id: page_6
+      bg_color: 0x000000
+      pad_all: 0
+      layout:
+        type: grid
+        grid_columns: [80, 80, 80, 80, 80, 80]
+        grid_rows:    [80, 80, 80, 80, 80, 80]
+      widgets:
+        - !include ui/tab_bar.yaml

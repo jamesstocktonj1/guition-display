@@ -1,0 +1,88 @@
+---
+# Guition ESP32-S3-4848S040 — 480x480 hardware configuration
+
+esp32:
+  variant: esp32s3
+  flash_size: 16MB
+  framework:
+    type: esp-idf
+    advanced:
+      execute_from_psram: true
+
+psram:
+  mode: octal
+  speed: 80MHz
+
+# -------------------------------------------
+# Backlight
+# -------------------------------------------
+output:
+  - platform: ledc
+    pin: GPIO38
+    id: backlight_pwm
+    frequency: 100Hz
+
+light:
+  - platform: monochromatic
+    output: backlight_pwm
+    id: display_backlight
+    name: Display Backlight
+    restore_mode: ALWAYS_ON
+
+# -------------------------------------------
+# Touchscreen (GT911 over I2C)
+# -------------------------------------------
+i2c:
+  - id: bus_a
+    sda: GPIO19
+    scl:
+      number: GPIO45
+      ignore_strapping_warning: true
+
+touchscreen:
+  platform: gt911
+  id: my_touchscreen
+  display: my_display
+  i2c_id: bus_a
+
+# -------------------------------------------
+# Display (ST7701S over SPI)
+# -------------------------------------------
+spi:
+  - id: lcd_spi
+    clk_pin: GPIO48
+    mosi_pin: GPIO47
+
+display:
+  - platform: st7701s
+    id: my_display
+    update_interval: never
+    auto_clear_enabled: false
+    spi_mode: MODE3
+    data_rate: 2MHz
+    color_order: RGB
+    invert_colors: false
+    dimensions:
+      width: 480
+      height: 480
+    cs_pin: GPIO39
+    de_pin: GPIO18
+    hsync_pin: GPIO16
+    vsync_pin: GPIO17
+    pclk_pin: GPIO21
+    pclk_frequency: 12MHz
+    pclk_inverted: false
+    hsync_pulse_width: 8
+    hsync_front_porch: 10
+    hsync_back_porch: 20
+    vsync_pulse_width: 8
+    vsync_front_porch: 10
+    vsync_back_porch: 10
+    init_sequence:
+      - 1
+      - [0xFF, 0x77, 0x01, 0x00, 0x00, 0x10]  # CMD2_BKSEL_BK0
+      - [0xCD, 0x00]                            # disable MDT flag
+    data_pins:
+      red:   [11, 12, 13, 14, 0]
+      green: [8, 20, 3, 46, 9, 10]
+      blue:  [4, 5, 6, 7, 15]
