@@ -27,6 +27,17 @@ font:
       "\U000F0241",  # mdi:flash
     ]
 
+  - file: "https://github.com/Templarian/MaterialDesign-Webfont/raw/master/fonts/materialdesignicons-webfont.ttf"
+    id: mdi_32
+    size: 32
+    bpp: 4
+    glyphs: [
+      "\U000F0335",  # mdi:lightbulb
+      "\U000F050F",  # mdi:thermometer
+      "\U000F0241",  # mdi:flash
+    ]
+
+
 # -------------------------------------------
 # Time (synced from Home Assistant)
 # -------------------------------------------

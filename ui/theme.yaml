@@ -52,7 +52,8 @@ substitutions:
   # Icon font
   # Override icon_font in main.yaml to swap to a different size.
   # -------------------------------------------
-  icon_font: mdi_16
+  icon_font:       mdi_16
+  icon_font_large: mdi_32
 
   # -------------------------------------------
   # Icon aliases — use these instead of raw unicode codepoints.

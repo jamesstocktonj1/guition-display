@@ -21,7 +21,7 @@ packages:
   # Buttons
   # -------------------------------------------
   table_lamp: !include
-    file: buttons/switch_button.yaml
+    file: buttons/switch_button_large.yaml
     vars:
       uid:       table_lamp
       page_id:   page_1
@@ -32,21 +32,21 @@ packages:
       entity_id: "light.table_lamp"
 
   james_temp: !include
-    file: buttons/temp_display.yaml
+    file: buttons/temp_display_large.yaml
     vars:
       uid:       james_temp
       page_id:   page_1
-      x:         $grid_col_1
-      y:         $grid_row_5
+      x:         $grid_col_2
+      y:         $grid_row_1
       text:      "James"
       entity_id: "climate.james"
 
   ac_power_1: !include
-    file: buttons/power_display.yaml
+    file: buttons/power_display_large.yaml
     vars:
       uid:       ac_power_1
       page_id:   page_1
-      x:         $grid_col_2
+      x:         $grid_col_4
       y:         $grid_row_1
       text:      "AC Power"
       entity_id: "sensor.xiao_2_channel_wi_fi_ac_energy_meter_106814_bl0939_active_power_1"

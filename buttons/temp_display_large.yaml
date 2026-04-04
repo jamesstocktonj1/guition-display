@@ -1,0 +1,70 @@
+---
+# Large temperature display (2×1 cells = 160×80px) — reads current_temperature from a HA climate entity.
+#
+# Required vars:
+#   uid:       Unique ID, no spaces
+#   page_id:   Target page (page_1 … page_6)
+#   x:         Horizontal position (use $grid_col_0 … $grid_col_4)
+#   y:         Vertical position   (use $grid_row_1 … $grid_row_5)
+#   text:      Room name shown at the bottom
+#   entity_id: Home Assistant climate entity (climate.*)
+#
+# Note: 2 cells wide — max x is $grid_col_4 (col_5 would overflow the right edge).
+
+lvgl:
+  pages:
+    - id: !extend ${page_id | default("page_1")}
+      widgets:
+        - container:
+            id: ${uid}
+            x: ${x}
+            y: ${y}
+            width: $grid_cell_size_2x
+            height: $grid_cell_size
+            bg_opa: 0
+            border_width: 0
+            pad_all: 4
+            widgets:
+              - obj:
+                  width: 100%
+                  height: 100%
+                  radius: 12
+                  bg_color: $color_surface
+                  border_width: 0
+                  pad_all: 8
+                  widgets:
+                    - label:
+                        id: icon_${uid}
+                        align: left_mid
+                        y: -8
+                        text_font: $icon_font_large
+                        text_color: $color_primary
+                        text: $icon_thermometer
+
+                    - label:
+                        id: temp_${uid}
+                        align: right_mid
+                        y: -8
+                        text_color: $color_text
+                        text: "--°"
+
+                    - label:
+                        id: label_${uid}
+                        align: bottom_mid
+                        width: 100%
+                        long_mode: wrap
+                        text_align: center
+                        text_color: $color_text_muted
+                        text: ${text}
+
+sensor:
+  - id: sensor_${uid}
+    platform: homeassistant
+    entity_id: ${entity_id}
+    attribute: current_temperature
+    on_value:
+      - lvgl.label.update:
+          id: temp_${uid}
+          text:
+            format: "%.1f°"
+            args: [x]

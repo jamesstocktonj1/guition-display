@@ -19,7 +19,8 @@
 #       ...
 
 substitutions:
-  grid_cell_size: "80"
+  grid_cell_size:    "80"
+  grid_cell_size_2x: "160"  # 2×2 large button (spans 2 cols + 2 rows)
 
   # Column x-positions (left edge of each cell, 0–5)
   grid_col_0: "0"
