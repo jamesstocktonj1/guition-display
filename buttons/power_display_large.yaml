@@ -45,6 +45,7 @@ lvgl:
                         id: power_${uid}
                         align: right_mid
                         y: -8
+                        text_font: $value_font_large
                         text_color: $color_text
                         text: "--W"
 

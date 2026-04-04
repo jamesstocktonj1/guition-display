@@ -17,6 +17,12 @@ psram:
 # Fonts
 # -------------------------------------------
 font:
+  - file: "assets/fonts/Roboto-Regular.ttf"
+    id: roboto_24
+    size: 24
+    bpp: 4
+    glyphs: "0123456789.-+kWKMGHzAV°% "
+
   - file: "https://github.com/Templarian/MaterialDesign-Webfont/raw/master/fonts/materialdesignicons-webfont.ttf"
     id: mdi_16
     size: 16
