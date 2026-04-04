@@ -14,6 +14,18 @@ psram:
   speed: 80MHz
 
 # -------------------------------------------
+# Fonts
+# -------------------------------------------
+font:
+  - file: "https://github.com/Templarian/MaterialDesign-Webfont/raw/master/fonts/materialdesignicons-webfont.ttf"
+    id: mdi_24
+    size: 24
+    bpp: 4
+    glyphs: [
+      "\U000F0335",  # mdi:lightbulb
+    ]
+
+# -------------------------------------------
 # Backlight
 # -------------------------------------------
 output:

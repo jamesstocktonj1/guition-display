@@ -5,19 +5,17 @@ esphome:
   min_version: 2026.3.0
 
 # -------------------------------------------
-# Button colour scheme
+# Theme overrides (optional)
+# Any substitution defined here takes precedence over config/theme.yaml.
+# e.g. to change the primary accent colour:
+#   substitutions:
+#     color_primary: "0x00AA88"
 # -------------------------------------------
-substitutions:
-  button_on_color:  "0xFF6600"  # orange
-  button_off_color: "0x222222"  # dark grey
-  icon_on_color:    "0xFFFF00"  # yellow
-  icon_off_color:   "0x888888"  # grey
-  label_on_color:   "0xFFFFFF"  # white
-  label_off_color:  "0x888888"  # grey
 
 packages:
   hardware: !include config/hardware.yaml
   wifi:     !include config/wifi.yaml
+  theme:    !include ui/theme.yaml
   # -------------------------------------------
   # Buttons
   # -------------------------------------------
@@ -42,7 +40,7 @@ packages:
 lvgl:
   pages:
     - id: page_1
-      bg_color: 0x000000
+      bg_color: $color_bg
       pad_all: 0
       layout:
         type: grid
@@ -52,7 +50,7 @@ lvgl:
         - !include ui/tab_bar.yaml
 
     - id: page_2
-      bg_color: 0x000000
+      bg_color: $color_bg
       pad_all: 0
       layout:
         type: grid
@@ -62,7 +60,7 @@ lvgl:
         - !include ui/tab_bar.yaml
 
     - id: page_3
-      bg_color: 0x000000
+      bg_color: $color_bg
       pad_all: 0
       layout:
         type: grid
@@ -72,7 +70,7 @@ lvgl:
         - !include ui/tab_bar.yaml
 
     - id: page_4
-      bg_color: 0x000000
+      bg_color: $color_bg
       pad_all: 0
       layout:
         type: grid
@@ -82,7 +80,7 @@ lvgl:
         - !include ui/tab_bar.yaml
 
     - id: page_5
-      bg_color: 0x000000
+      bg_color: $color_bg
       pad_all: 0
       layout:
         type: grid
@@ -92,7 +90,7 @@ lvgl:
         - !include ui/tab_bar.yaml
 
     - id: page_6
-      bg_color: 0x000000
+      bg_color: $color_bg
       pad_all: 0
       layout:
         type: grid
