@@ -22,17 +22,56 @@ obj:
         pad_all: 4
         widgets:
           - button:
+              id: tab_btn_1
               width: 100%
               height: 100%
               radius: 12
               border_width: 0
-              bg_color: $color_surface
+              bg_color: $color_primary
               pad_all: 0
               on_click:
                 - lvgl.page.show: page_1
+                - lvgl.widget.update:
+                    id: tab_btn_1
+                    bg_color: $color_primary
+                - lvgl.widget.update:
+                    id: tab_label_1
+                    text_color: $color_icon_on
+                - lvgl.widget.update:
+                    id: tab_btn_2
+                    bg_color: $color_surface
+                - lvgl.widget.update:
+                    id: tab_label_2
+                    text_color: $color_text_muted
+                - lvgl.widget.update:
+                    id: tab_btn_3
+                    bg_color: $color_surface
+                - lvgl.widget.update:
+                    id: tab_label_3
+                    text_color: $color_text_muted
+                - lvgl.widget.update:
+                    id: tab_btn_4
+                    bg_color: $color_surface
+                - lvgl.widget.update:
+                    id: tab_label_4
+                    text_color: $color_text_muted
+                - lvgl.widget.update:
+                    id: tab_btn_5
+                    bg_color: $color_surface
+                - lvgl.widget.update:
+                    id: tab_label_5
+                    text_color: $color_text_muted
+                - lvgl.widget.update:
+                    id: tab_btn_6
+                    bg_color: $color_surface
+                - lvgl.widget.update:
+                    id: tab_label_6
+                    text_color: $color_text_muted
               widgets:
                 - label:
+                    id: tab_label_1
                     align: center
+                    text_color: $color_icon_on
                     text: "1"
 
     - obj:
@@ -45,6 +84,7 @@ obj:
         pad_all: 4
         widgets:
           - button:
+              id: tab_btn_2
               width: 100%
               height: 100%
               radius: 12
@@ -53,9 +93,47 @@ obj:
               pad_all: 0
               on_click:
                 - lvgl.page.show: page_2
+                - lvgl.widget.update:
+                    id: tab_btn_1
+                    bg_color: $color_surface
+                - lvgl.widget.update:
+                    id: tab_label_1
+                    text_color: $color_text_muted
+                - lvgl.widget.update:
+                    id: tab_btn_2
+                    bg_color: $color_primary
+                - lvgl.widget.update:
+                    id: tab_label_2
+                    text_color: $color_icon_on
+                - lvgl.widget.update:
+                    id: tab_btn_3
+                    bg_color: $color_surface
+                - lvgl.widget.update:
+                    id: tab_label_3
+                    text_color: $color_text_muted
+                - lvgl.widget.update:
+                    id: tab_btn_4
+                    bg_color: $color_surface
+                - lvgl.widget.update:
+                    id: tab_label_4
+                    text_color: $color_text_muted
+                - lvgl.widget.update:
+                    id: tab_btn_5
+                    bg_color: $color_surface
+                - lvgl.widget.update:
+                    id: tab_label_5
+                    text_color: $color_text_muted
+                - lvgl.widget.update:
+                    id: tab_btn_6
+                    bg_color: $color_surface
+                - lvgl.widget.update:
+                    id: tab_label_6
+                    text_color: $color_text_muted
               widgets:
                 - label:
+                    id: tab_label_2
                     align: center
+                    text_color: $color_text_muted
                     text: "2"
 
     - obj:
@@ -68,6 +146,7 @@ obj:
         pad_all: 4
         widgets:
           - button:
+              id: tab_btn_3
               width: 100%
               height: 100%
               radius: 12
@@ -76,9 +155,47 @@ obj:
               pad_all: 0
               on_click:
                 - lvgl.page.show: page_3
+                - lvgl.widget.update:
+                    id: tab_btn_1
+                    bg_color: $color_surface
+                - lvgl.widget.update:
+                    id: tab_label_1
+                    text_color: $color_text_muted
+                - lvgl.widget.update:
+                    id: tab_btn_2
+                    bg_color: $color_surface
+                - lvgl.widget.update:
+                    id: tab_label_2
+                    text_color: $color_text_muted
+                - lvgl.widget.update:
+                    id: tab_btn_3
+                    bg_color: $color_primary
+                - lvgl.widget.update:
+                    id: tab_label_3
+                    text_color: $color_icon_on
+                - lvgl.widget.update:
+                    id: tab_btn_4
+                    bg_color: $color_surface
+                - lvgl.widget.update:
+                    id: tab_label_4
+                    text_color: $color_text_muted
+                - lvgl.widget.update:
+                    id: tab_btn_5
+                    bg_color: $color_surface
+                - lvgl.widget.update:
+                    id: tab_label_5
+                    text_color: $color_text_muted
+                - lvgl.widget.update:
+                    id: tab_btn_6
+                    bg_color: $color_surface
+                - lvgl.widget.update:
+                    id: tab_label_6
+                    text_color: $color_text_muted
               widgets:
                 - label:
+                    id: tab_label_3
                     align: center
+                    text_color: $color_text_muted
                     text: "3"
 
     - obj:
@@ -91,6 +208,7 @@ obj:
         pad_all: 4
         widgets:
           - button:
+              id: tab_btn_4
               width: 100%
               height: 100%
               radius: 12
@@ -99,9 +217,47 @@ obj:
               pad_all: 0
               on_click:
                 - lvgl.page.show: page_4
+                - lvgl.widget.update:
+                    id: tab_btn_1
+                    bg_color: $color_surface
+                - lvgl.widget.update:
+                    id: tab_label_1
+                    text_color: $color_text_muted
+                - lvgl.widget.update:
+                    id: tab_btn_2
+                    bg_color: $color_surface
+                - lvgl.widget.update:
+                    id: tab_label_2
+                    text_color: $color_text_muted
+                - lvgl.widget.update:
+                    id: tab_btn_3
+                    bg_color: $color_surface
+                - lvgl.widget.update:
+                    id: tab_label_3
+                    text_color: $color_text_muted
+                - lvgl.widget.update:
+                    id: tab_btn_4
+                    bg_color: $color_primary
+                - lvgl.widget.update:
+                    id: tab_label_4
+                    text_color: $color_icon_on
+                - lvgl.widget.update:
+                    id: tab_btn_5
+                    bg_color: $color_surface
+                - lvgl.widget.update:
+                    id: tab_label_5
+                    text_color: $color_text_muted
+                - lvgl.widget.update:
+                    id: tab_btn_6
+                    bg_color: $color_surface
+                - lvgl.widget.update:
+                    id: tab_label_6
+                    text_color: $color_text_muted
               widgets:
                 - label:
+                    id: tab_label_4
                     align: center
+                    text_color: $color_text_muted
                     text: "4"
 
     - obj:
@@ -114,6 +270,7 @@ obj:
         pad_all: 4
         widgets:
           - button:
+              id: tab_btn_5
               width: 100%
               height: 100%
               radius: 12
@@ -122,9 +279,47 @@ obj:
               pad_all: 0
               on_click:
                 - lvgl.page.show: page_5
+                - lvgl.widget.update:
+                    id: tab_btn_1
+                    bg_color: $color_surface
+                - lvgl.widget.update:
+                    id: tab_label_1
+                    text_color: $color_text_muted
+                - lvgl.widget.update:
+                    id: tab_btn_2
+                    bg_color: $color_surface
+                - lvgl.widget.update:
+                    id: tab_label_2
+                    text_color: $color_text_muted
+                - lvgl.widget.update:
+                    id: tab_btn_3
+                    bg_color: $color_surface
+                - lvgl.widget.update:
+                    id: tab_label_3
+                    text_color: $color_text_muted
+                - lvgl.widget.update:
+                    id: tab_btn_4
+                    bg_color: $color_surface
+                - lvgl.widget.update:
+                    id: tab_label_4
+                    text_color: $color_text_muted
+                - lvgl.widget.update:
+                    id: tab_btn_5
+                    bg_color: $color_primary
+                - lvgl.widget.update:
+                    id: tab_label_5
+                    text_color: $color_icon_on
+                - lvgl.widget.update:
+                    id: tab_btn_6
+                    bg_color: $color_surface
+                - lvgl.widget.update:
+                    id: tab_label_6
+                    text_color: $color_text_muted
               widgets:
                 - label:
+                    id: tab_label_5
                     align: center
+                    text_color: $color_text_muted
                     text: "5"
 
     - obj:
@@ -137,6 +332,7 @@ obj:
         pad_all: 4
         widgets:
           - button:
+              id: tab_btn_6
               width: 100%
               height: 100%
               radius: 12
@@ -145,7 +341,45 @@ obj:
               pad_all: 0
               on_click:
                 - lvgl.page.show: page_6
+                - lvgl.widget.update:
+                    id: tab_btn_1
+                    bg_color: $color_surface
+                - lvgl.widget.update:
+                    id: tab_label_1
+                    text_color: $color_text_muted
+                - lvgl.widget.update:
+                    id: tab_btn_2
+                    bg_color: $color_surface
+                - lvgl.widget.update:
+                    id: tab_label_2
+                    text_color: $color_text_muted
+                - lvgl.widget.update:
+                    id: tab_btn_3
+                    bg_color: $color_surface
+                - lvgl.widget.update:
+                    id: tab_label_3
+                    text_color: $color_text_muted
+                - lvgl.widget.update:
+                    id: tab_btn_4
+                    bg_color: $color_surface
+                - lvgl.widget.update:
+                    id: tab_label_4
+                    text_color: $color_text_muted
+                - lvgl.widget.update:
+                    id: tab_btn_5
+                    bg_color: $color_surface
+                - lvgl.widget.update:
+                    id: tab_label_5
+                    text_color: $color_text_muted
+                - lvgl.widget.update:
+                    id: tab_btn_6
+                    bg_color: $color_primary
+                - lvgl.widget.update:
+                    id: tab_label_6
+                    text_color: $color_icon_on
               widgets:
                 - label:
+                    id: tab_label_6
                     align: center
+                    text_color: $color_text_muted
                     text: "6"
