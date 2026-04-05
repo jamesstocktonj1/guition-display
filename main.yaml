@@ -189,6 +189,16 @@ packages:
   # Page 3 — power monitor
   # -------------------------------------------
 
+  p3_voltage: !include
+    file: buttons/voltage_display_large.yaml
+    vars:
+      uid:       p3_voltage
+      page_id:   page_3
+      x:         $grid_col_0
+      y:         $grid_row_1
+      text:      "Voltage"
+      entity_id: "sensor.mean_voltage"
+
   p3_power_sum: !include
     file: buttons/power_display_large.yaml
     vars:
@@ -199,10 +209,10 @@ packages:
       text:      "Total Power"
       entity_id: "sensor.total_power"
 
-  p3_power_current: !include
+  p3_current_sum: !include
     file: buttons/current_display_large.yaml
     vars:
-      uid:       p3_power_current
+      uid:       p3_current_sum
       page_id:   page_3
       x:         $grid_col_4
       y:         $grid_row_1

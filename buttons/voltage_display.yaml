@@ -1,0 +1,69 @@
+---
+# Voltage monitoring display — reads voltage from a HA sensor entity.
+#
+# Required vars:
+#   uid:       Unique ID, no spaces (e.g. ac_voltage_1)
+#   page_id:   Target page (page_1 … page_6)
+#   x:         Horizontal position (use $grid_col_0 … $grid_col_5)
+#   y:         Vertical position   (use $grid_row_1 … $grid_row_5)
+#   text:      Device/circuit name shown at the bottom
+#   entity_id: Home Assistant sensor entity reporting volts (sensor.*)
+
+lvgl:
+  pages:
+    - id: !extend ${page_id | default("page_1")}
+      widgets:
+        - container:
+            id: ${uid}
+            x: ${x}
+            y: ${y}
+            width: $grid_cell_size
+            height: $grid_cell_size
+            bg_opa: 0
+            border_width: 0
+            pad_all: 4
+            widgets:
+              - obj:
+                  width: 100%
+                  height: 100%
+                  radius: 12
+                  bg_color: $color_surface
+                  border_width: 0
+                  pad_all: 8
+                  widgets:
+                    - label:
+                        id: icon_${uid}
+                        align: left_mid
+                        y: -8
+                        text_font: $icon_font
+                        text_color: $color_primary
+                        text: $icon_flash
+
+                    - label:
+                        id: voltage_${uid}
+                        align: right_mid
+                        y: -8
+                        text_color: $color_text
+                        text: "--V"
+
+                    - label:
+                        id: label_${uid}
+                        align: bottom_mid
+                        width: 100%
+                        long_mode: wrap
+                        text_align: center
+                        text_color: $color_text_muted
+                        text: ${text}
+
+sensor:
+  - id: sensor_${uid}
+    platform: homeassistant
+    entity_id: ${entity_id}
+    filters:
+      - filter_out: nan
+    on_value:
+      - lvgl.label.update:
+          id: voltage_${uid}
+          text:
+            format: "%.1fV"
+            args: [x]

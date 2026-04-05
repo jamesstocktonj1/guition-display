@@ -62,5 +62,5 @@ substitutions:
   # -------------------------------------------
   icon_lightbulb:   "\U000F0335"
   icon_thermometer: "\U000F050F"
-  icon_flash:       "\U000F0241"
+  icon_flash:       "\U000F140B"
   icon_waveform:    "\U000F1480"
