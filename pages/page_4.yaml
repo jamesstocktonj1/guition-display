@@ -1,0 +1,15 @@
+---
+# Page 4 — Graphs
+
+packages:
+  power_graph: !include
+    file: ../components/display/graph_display.yaml
+    vars:
+      uid:       power_graph
+      page_id:   page_4
+      x:         $grid_col_0
+      y:         $grid_row_1
+      text:      "Power (W)"
+      entity_id: "sensor.total_power"
+      y_min:     "0"
+      y_max:     "3000"

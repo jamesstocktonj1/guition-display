@@ -1,0 +1,112 @@
+---
+# Line graph display (3×3 cells = 240×240px) — plots a rolling 50-point history of a HA sensor.
+# Uses an LVGL canvas widget drawn via lambda on each sensor update.
+#
+# Required vars:
+#   uid:       Unique ID, no spaces
+#   page_id:   Target page (page_1 … page_6)
+#   x:         Horizontal position (use $grid_col_0 … $grid_col_3)
+#   y:         Vertical position   (use $grid_row_1 … $grid_row_3)
+#   text:      Graph title shown above the chart
+#   entity_id: Home Assistant sensor entity to track
+#
+# Optional vars:
+#   y_min:     Y-axis minimum value (default: 0)
+#   y_max:     Y-axis maximum value (default: 1000)
+#
+# Note: 3 cells wide and 3 cells tall — max x is $grid_col_3, max y is $grid_row_3.
+
+globals:
+  - id: buf_${uid}
+    type: float[50]
+  - id: idx_${uid}
+    type: int
+    initial_value: '0'
+
+lvgl:
+  pages:
+    - id: !extend ${page_id | default("page_1")}
+      widgets:
+        - container:
+            id: ${uid}
+            x: ${x}
+            y: ${y}
+            width: $grid_cell_size_3x
+            height: $grid_cell_size_3x
+            bg_opa: 0
+            border_width: 0
+            pad_all: 4
+            widgets:
+              - obj:
+                  width: 100%
+                  height: 100%
+                  radius: 12
+                  bg_color: $color_surface
+                  border_width: 0
+                  pad_all: 8
+                  widgets:
+                    - label:
+                        id: title_${uid}
+                        align: top_left
+                        text_color: $color_text_muted
+                        text: ${text}
+
+                    - label:
+                        id: value_${uid}
+                        align: top_right
+                        text_color: $color_primary
+                        text: "--"
+
+                    - canvas:
+                        id: canvas_${uid}
+                        x: 0
+                        y: 20
+                        width: 210
+                        height: 182
+
+sensor:
+  - id: sensor_${uid}
+    platform: homeassistant
+    entity_id: ${entity_id}
+    filters:
+      - filter_out: nan
+    on_value:
+      - lvgl.label.update:
+          id: value_${uid}
+          text:
+            format: "%.0f"
+            args: [x]
+      - lambda: |-
+          id(buf_${uid})[id(idx_${uid}) % 50] = x;
+          id(idx_${uid})++;
+          int total = std::min(id(idx_${uid}), 50);
+          const int W = 210, H = 182;
+          const float Y_MAX = ${y_max | default("1000")};
+          const float Y_MIN = ${y_min | default("0")};
+          const float range = Y_MAX - Y_MIN;
+
+          lv_canvas_fill_bg(id(canvas_${uid}), lv_color_hex(0xDDE8F5), LV_OPA_COVER);
+
+          if (total < 2) return;
+
+          lv_draw_line_dsc_t dsc;
+          lv_draw_line_dsc_init(&dsc);
+          dsc.color = lv_color_hex(0x1565C0);
+          dsc.width = 2;
+          dsc.round_start = 1;
+          dsc.round_end = 1;
+
+          for (int i = 0; i < total - 1; i++) {
+            int a = (id(idx_${uid}) - total + i) % 50;
+            int b = (id(idx_${uid}) - total + i + 1) % 50;
+            float v1 = id(buf_${uid})[a];
+            float v2 = id(buf_${uid})[b];
+            lv_coord_t px1 = (lv_coord_t)(i * (W - 1) / (total - 1));
+            lv_coord_t px2 = (lv_coord_t)((i + 1) * (W - 1) / (total - 1));
+            float n1 = std::max(0.0f, std::min(1.0f, (v1 - Y_MIN) / range));
+            float n2 = std::max(0.0f, std::min(1.0f, (v2 - Y_MIN) / range));
+            lv_coord_t py1 = (lv_coord_t)((1.0f - n1) * (H - 1));
+            lv_coord_t py2 = (lv_coord_t)((1.0f - n2) * (H - 1));
+            lv_point_t pts[2] = {{px1, py1}, {px2, py2}};
+            lv_canvas_draw_line(id(canvas_${uid}), pts, 2, &dsc);
+          }

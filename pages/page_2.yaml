@@ -1,7 +1,7 @@
 ---
 packages:
   p2_climate1: !include
-    file: ../buttons/temp_display_large.yaml
+    file: ../components/display/temp_display_large.yaml
     vars:
       uid:       p2_climate1
       page_id:   page_2
@@ -11,7 +11,7 @@ packages:
       entity_id: "climate.home"
 
   p2_climate2: !include
-    file: ../buttons/temp_display_large.yaml
+    file: ../components/display/temp_display_large.yaml
     vars:
       uid:       p2_climate2
       page_id:   page_2
@@ -21,7 +21,7 @@ packages:
       entity_id: "climate.kitchen"
 
   p2_climate3: !include
-    file: ../buttons/temp_display_large.yaml
+    file: ../components/display/temp_display_large.yaml
     vars:
       uid:       p2_climate3
       page_id:   page_2
@@ -31,7 +31,7 @@ packages:
       entity_id: "climate.snug"
 
   p2_climate4: !include
-    file: ../buttons/temp_display_large.yaml
+    file: ../components/display/temp_display_large.yaml
     vars:
       uid:       p2_climate4
       page_id:   page_2
@@ -41,7 +41,7 @@ packages:
       entity_id: "climate.lounge"
 
   p2_climate5: !include
-    file: ../buttons/temp_display_large.yaml
+    file: ../components/display/temp_display_large.yaml
     vars:
       uid:       p2_climate5
       page_id:   page_2
@@ -51,7 +51,7 @@ packages:
       entity_id: "climate.conservatory"
 
   p2_climate6: !include
-    file: ../buttons/temp_display_large.yaml
+    file: ../components/display/temp_display_large.yaml
     vars:
       uid:       p2_climate6
       page_id:   page_2
@@ -61,7 +61,7 @@ packages:
       entity_id: "climate.master_bed"
 
   p2_climate7: !include
-    file: ../buttons/temp_display_large.yaml
+    file: ../components/display/temp_display_large.yaml
     vars:
       uid:       p2_climate7
       page_id:   page_2
@@ -71,7 +71,7 @@ packages:
       entity_id: "climate.james"
 
   p2_climate8: !include
-    file: ../buttons/temp_display_large.yaml
+    file: ../components/display/temp_display_large.yaml
     vars:
       uid:       p2_climate8
       page_id:   page_2
@@ -81,7 +81,7 @@ packages:
       entity_id: "climate.beth"
 
   p2_climate9: !include
-    file: ../buttons/temp_display_large.yaml
+    file: ../components/display/temp_display_large.yaml
     vars:
       uid:       p2_climate9
       page_id:   page_2
@@ -91,7 +91,7 @@ packages:
       entity_id: "climate.new_bed"
 
   p2_climate10: !include
-    file: ../buttons/temp_display_large.yaml
+    file: ../components/display/temp_display_large.yaml
     vars:
       uid:       p2_climate10
       page_id:   page_2
@@ -101,7 +101,7 @@ packages:
       entity_id: "climate.office"
 
   p2_climate11: !include
-    file: ../buttons/temp_display_large.yaml
+    file: ../components/display/temp_display_large.yaml
     vars:
       uid:       p2_climate11
       page_id:   page_2
@@ -111,7 +111,7 @@ packages:
       entity_id: "climate.utility"
 
   p2_climate12: !include
-    file: ../buttons/temp_display_large.yaml
+    file: ../components/display/temp_display_large.yaml
     vars:
       uid:       p2_climate12
       page_id:   page_2

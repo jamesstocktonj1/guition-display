@@ -1,7 +1,7 @@
 ---
 packages:
   p6_r1c0: !include
-    file: ../buttons/switch_button.yaml
+    file: ../components/buttons/switch_button.yaml
     vars:
       uid: p6_r1c0
       page_id: page_6
@@ -12,7 +12,7 @@ packages:
       entity_id: "switch.test_1"
 
   p6_r1c1: !include
-    file: ../buttons/switch_button.yaml
+    file: ../components/buttons/switch_button.yaml
     vars:
       uid: p6_r1c1
       page_id: page_6
@@ -23,7 +23,7 @@ packages:
       entity_id: "switch.test_2"
 
   p6_r1c2: !include
-    file: ../buttons/switch_button.yaml
+    file: ../components/buttons/switch_button.yaml
     vars:
       uid: p6_r1c2
       page_id: page_6
@@ -34,7 +34,7 @@ packages:
       entity_id: "switch.test_3"
 
   p6_r1c3: !include
-    file: ../buttons/switch_button.yaml
+    file: ../components/buttons/switch_button.yaml
     vars:
       uid: p6_r1c3
       page_id: page_6
@@ -45,7 +45,7 @@ packages:
       entity_id: "switch.test_4"
 
   p6_r1c4: !include
-    file: ../buttons/switch_button.yaml
+    file: ../components/buttons/switch_button.yaml
     vars:
       uid: p6_r1c4
       page_id: page_6
@@ -56,7 +56,7 @@ packages:
       entity_id: "switch.test_5"
 
   p6_r1c5: !include
-    file: ../buttons/switch_button.yaml
+    file: ../components/buttons/switch_button.yaml
     vars:
       uid: p6_r1c5
       page_id: page_6
@@ -67,7 +67,7 @@ packages:
       entity_id: "switch.test_6"
 
   p6_r2c0: !include
-    file: ../buttons/switch_button.yaml
+    file: ../components/buttons/switch_button.yaml
     vars:
       uid: p6_r2c0
       page_id: page_6
@@ -78,7 +78,7 @@ packages:
       entity_id: "switch.test_7"
 
   p6_r2c1: !include
-    file: ../buttons/switch_button.yaml
+    file: ../components/buttons/switch_button.yaml
     vars:
       uid: p6_r2c1
       page_id: page_6
@@ -89,7 +89,7 @@ packages:
       entity_id: "switch.test_8"
 
   p6_r2c2: !include
-    file: ../buttons/switch_button.yaml
+    file: ../components/buttons/switch_button.yaml
     vars:
       uid: p6_r2c2
       page_id: page_6
@@ -100,7 +100,7 @@ packages:
       entity_id: "switch.test_9"
 
   p6_r2c3: !include
-    file: ../buttons/switch_button.yaml
+    file: ../components/buttons/switch_button.yaml
     vars:
       uid: p6_r2c3
       page_id: page_6
@@ -111,7 +111,7 @@ packages:
       entity_id: "switch.test_10"
 
   p6_r2c4: !include
-    file: ../buttons/switch_button.yaml
+    file: ../components/buttons/switch_button.yaml
     vars:
       uid: p6_r2c4
       page_id: page_6
@@ -122,7 +122,7 @@ packages:
       entity_id: "switch.test_11"
 
   p6_r2c5: !include
-    file: ../buttons/switch_button.yaml
+    file: ../components/buttons/switch_button.yaml
     vars:
       uid: p6_r2c5
       page_id: page_6
@@ -133,7 +133,7 @@ packages:
       entity_id: "switch.test_12"
 
   p6_r3c0: !include
-    file: ../buttons/switch_button.yaml
+    file: ../components/buttons/switch_button.yaml
     vars:
       uid: p6_r3c0
       page_id: page_6
@@ -144,7 +144,7 @@ packages:
       entity_id: "switch.test_13"
 
   p6_r3c1: !include
-    file: ../buttons/switch_button.yaml
+    file: ../components/buttons/switch_button.yaml
     vars:
       uid: p6_r3c1
       page_id: page_6
@@ -155,7 +155,7 @@ packages:
       entity_id: "switch.test_14"
 
   p6_r3c2: !include
-    file: ../buttons/switch_button.yaml
+    file: ../components/buttons/switch_button.yaml
     vars:
       uid: p6_r3c2
       page_id: page_6
@@ -166,7 +166,7 @@ packages:
       entity_id: "switch.test_15"
 
   p6_r3c3: !include
-    file: ../buttons/switch_button.yaml
+    file: ../components/buttons/switch_button.yaml
     vars:
       uid: p6_r3c3
       page_id: page_6
@@ -177,7 +177,7 @@ packages:
       entity_id: "switch.test_16"
 
   p6_r3c4: !include
-    file: ../buttons/switch_button.yaml
+    file: ../components/buttons/switch_button.yaml
     vars:
       uid: p6_r3c4
       page_id: page_6
@@ -188,7 +188,7 @@ packages:
       entity_id: "switch.test_17"
 
   p6_r3c5: !include
-    file: ../buttons/switch_button.yaml
+    file: ../components/buttons/switch_button.yaml
     vars:
       uid: p6_r3c5
       page_id: page_6
@@ -199,7 +199,7 @@ packages:
       entity_id: "switch.test_18"
 
   p6_r4c0: !include
-    file: ../buttons/switch_button.yaml
+    file: ../components/buttons/switch_button.yaml
     vars:
       uid: p6_r4c0
       page_id: page_6
@@ -210,7 +210,7 @@ packages:
       entity_id: "switch.test_19"
 
   p6_r4c1: !include
-    file: ../buttons/switch_button.yaml
+    file: ../components/buttons/switch_button.yaml
     vars:
       uid: p6_r4c1
       page_id: page_6
@@ -221,7 +221,7 @@ packages:
       entity_id: "switch.test_20"
 
   p6_r4c2: !include
-    file: ../buttons/switch_button.yaml
+    file: ../components/buttons/switch_button.yaml
     vars:
       uid: p6_r4c2
       page_id: page_6
@@ -232,7 +232,7 @@ packages:
       entity_id: "switch.test_21"
 
   p6_r4c3: !include
-    file: ../buttons/switch_button.yaml
+    file: ../components/buttons/switch_button.yaml
     vars:
       uid: p6_r4c3
       page_id: page_6
@@ -243,7 +243,7 @@ packages:
       entity_id: "switch.test_22"
 
   p6_r4c4: !include
-    file: ../buttons/switch_button.yaml
+    file: ../components/buttons/switch_button.yaml
     vars:
       uid: p6_r4c4
       page_id: page_6
@@ -254,7 +254,7 @@ packages:
       entity_id: "switch.test_23"
 
   p6_r4c5: !include
-    file: ../buttons/switch_button.yaml
+    file: ../components/buttons/switch_button.yaml
     vars:
       uid: p6_r4c5
       page_id: page_6
@@ -265,7 +265,7 @@ packages:
       entity_id: "switch.test_24"
 
   p6_r5c0: !include
-    file: ../buttons/switch_button.yaml
+    file: ../components/buttons/switch_button.yaml
     vars:
       uid: p6_r5c0
       page_id: page_6
@@ -276,7 +276,7 @@ packages:
       entity_id: "switch.test_25"
 
   p6_r5c1: !include
-    file: ../buttons/switch_button.yaml
+    file: ../components/buttons/switch_button.yaml
     vars:
       uid: p6_r5c1
       page_id: page_6
@@ -287,7 +287,7 @@ packages:
       entity_id: "switch.test_26"
 
   p6_r5c2: !include
-    file: ../buttons/switch_button.yaml
+    file: ../components/buttons/switch_button.yaml
     vars:
       uid: p6_r5c2
       page_id: page_6
@@ -298,7 +298,7 @@ packages:
       entity_id: "switch.test_27"
 
   p6_r5c3: !include
-    file: ../buttons/switch_button.yaml
+    file: ../components/buttons/switch_button.yaml
     vars:
       uid: p6_r5c3
       page_id: page_6
@@ -309,7 +309,7 @@ packages:
       entity_id: "switch.test_28"
 
   p6_r5c4: !include
-    file: ../buttons/switch_button.yaml
+    file: ../components/buttons/switch_button.yaml
     vars:
       uid: p6_r5c4
       page_id: page_6
@@ -320,7 +320,7 @@ packages:
       entity_id: "switch.test_29"
 
   p6_r5c5: !include
-    file: ../buttons/switch_button.yaml
+    file: ../components/buttons/switch_button.yaml
     vars:
       uid: p6_r5c5
       page_id: page_6

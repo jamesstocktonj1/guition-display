@@ -37,7 +37,7 @@ substitutions:
   # Pass these as vars overrides in your package include:
   #
   #   my_scene: !include
-  #     file: buttons/switch_button.yaml
+  #     file: components/buttons/switch_button.yaml
   #     vars:
   #       uid:             my_scene
   #       button_on_color: $btn_secondary_on

@@ -23,6 +23,7 @@ packages:
   page_1: !include pages/page_1.yaml
   page_2: !include pages/page_2.yaml
   page_3: !include pages/page_3.yaml
+  page_4: !include pages/page_4.yaml
   page_6: !include pages/page_6.yaml
 
 # -------------------------------------------

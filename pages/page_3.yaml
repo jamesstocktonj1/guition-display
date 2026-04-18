@@ -1,7 +1,7 @@
 ---
 packages:
   p3_voltage: !include
-    file: ../buttons/voltage_display_large.yaml
+    file: ../components/display/voltage_display_large.yaml
     vars:
       uid:       p3_voltage
       page_id:   page_3
@@ -11,7 +11,7 @@ packages:
       entity_id: "sensor.mean_voltage"
 
   p3_power_sum: !include
-    file: ../buttons/power_display_large.yaml
+    file: ../components/display/power_display_large.yaml
     vars:
       uid:       p3_power_sum
       page_id:   page_3
@@ -21,7 +21,7 @@ packages:
       entity_id: "sensor.total_power"
 
   p3_current_sum: !include
-    file: ../buttons/current_display_large.yaml
+    file: ../components/display/current_display_large.yaml
     vars:
       uid:       p3_current_sum
       page_id:   page_3
@@ -31,7 +31,7 @@ packages:
       entity_id: "sensor.total_current"
 
   p3_power1: !include
-    file: ../buttons/power_display_large.yaml
+    file: ../components/display/power_display_large.yaml
     vars:
       uid:       p3_power1
       page_id:   page_3
@@ -41,7 +41,7 @@ packages:
       entity_id: "sensor.xiao_2_channel_wi_fi_ac_energy_meter_106814_bl0939_active_power_1"
 
   p3_power2: !include
-    file: ../buttons/power_display_large.yaml
+    file: ../components/display/power_display_large.yaml
     vars:
       uid:       p3_power2
       page_id:   page_3
@@ -51,7 +51,7 @@ packages:
       entity_id: "sensor.xiao_2_channel_wi_fi_ac_energy_meter_b5fb5c_bl0939_active_power_1"
 
   p3_power3: !include
-    file: ../buttons/power_display_large.yaml
+    file: ../components/display/power_display_large.yaml
     vars:
       uid:       p3_power3
       page_id:   page_3
@@ -61,7 +61,7 @@ packages:
       entity_id: "sensor.xiao_2_channel_wi_fi_ac_energy_meter_b5fc18_bl0939_active_power_1"
 
   p3_current1: !include
-    file: ../buttons/current_display_large.yaml
+    file: ../components/display/current_display_large.yaml
     vars:
       uid:       p3_current1
       page_id:   page_3
@@ -71,7 +71,7 @@ packages:
       entity_id: "sensor.xiao_2_channel_wi_fi_ac_energy_meter_106814_bl0939_current_1"
 
   p3_current2: !include
-    file: ../buttons/current_display_large.yaml
+    file: ../components/display/current_display_large.yaml
     vars:
       uid:       p3_current2
       page_id:   page_3
@@ -81,7 +81,7 @@ packages:
       entity_id: "sensor.xiao_2_channel_wi_fi_ac_energy_meter_b5fb5c_bl0939_current_1"
 
   p3_current3: !include
-    file: ../buttons/current_display_large.yaml
+    file: ../components/display/current_display_large.yaml
     vars:
       uid:       p3_current3
       page_id:   page_3
@@ -91,7 +91,7 @@ packages:
       entity_id: "sensor.xiao_2_channel_wi_fi_ac_energy_meter_b5fc18_bl0939_current_1"
 
   p3_power4: !include
-    file: ../buttons/power_display_large.yaml
+    file: ../components/display/power_display_large.yaml
     vars:
       uid:       p3_power4
       page_id:   page_3
@@ -101,7 +101,7 @@ packages:
       entity_id: "sensor.xiao_2_channel_wi_fi_ac_energy_meter_106814_bl0939_active_power_2"
 
   p3_power5: !include
-    file: ../buttons/power_display_large.yaml
+    file: ../components/display/power_display_large.yaml
     vars:
       uid:       p3_power5
       page_id:   page_3
@@ -111,7 +111,7 @@ packages:
       entity_id: "sensor.xiao_2_channel_wi_fi_ac_energy_meter_b5fb5c_bl0939_active_power_2"
 
   p3_power6: !include
-    file: ../buttons/power_display_large.yaml
+    file: ../components/display/power_display_large.yaml
     vars:
       uid:       p3_power6
       page_id:   page_3
@@ -121,7 +121,7 @@ packages:
       entity_id: "sensor.xiao_2_channel_wi_fi_ac_energy_meter_b5fc18_bl0939_active_power_2"
 
   p3_current4: !include
-    file: ../buttons/current_display_large.yaml
+    file: ../components/display/current_display_large.yaml
     vars:
       uid:       p3_current4
       page_id:   page_3
@@ -131,7 +131,7 @@ packages:
       entity_id: "sensor.xiao_2_channel_wi_fi_ac_energy_meter_106814_bl0939_current_2"
 
   p3_current5: !include
-    file: ../buttons/current_display_large.yaml
+    file: ../components/display/current_display_large.yaml
     vars:
       uid:       p3_current5
       page_id:   page_3
@@ -141,7 +141,7 @@ packages:
       entity_id: "sensor.xiao_2_channel_wi_fi_ac_energy_meter_b5fb5c_bl0939_current_2"
 
   p3_current6: !include
-    file: ../buttons/current_display_large.yaml
+    file: ../components/display/current_display_large.yaml
     vars:
       uid:       p3_current6
       page_id:   page_3

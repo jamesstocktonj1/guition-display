@@ -10,7 +10,7 @@
 # Use these substitutions as x/y vars when including a button package:
 #
 #   my_button: !include
-#     file: buttons/switch_button.yaml
+#     file: components/buttons/switch_button.yaml
 #     vars:
 #       uid:       my_button
 #       page_id:   page_1
@@ -21,6 +21,7 @@
 substitutions:
   grid_cell_size:    "80"
   grid_cell_size_2x: "160"  # 2×2 large button (spans 2 cols + 2 rows)
+  grid_cell_size_3x: "240"  # 3×3 graph (spans 3 cols + 3 rows)
 
   # Column x-positions (left edge of each cell, 0–5)
   grid_col_0: "0"

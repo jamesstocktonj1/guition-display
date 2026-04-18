@@ -1,7 +1,7 @@
 ---
 packages:
   p1_home_temp: !include
-    file: ../buttons/temp_display_large.yaml
+    file: ../components/display/temp_display_large.yaml
     vars:
       uid:       p1_home_temp
       page_id:   page_1
@@ -11,7 +11,7 @@ packages:
       entity_id: "climate.home"
 
   p1_total_power: !include
-    file: ../buttons/power_display_large.yaml
+    file: ../components/display/power_display_large.yaml
     vars:
       uid:       p1_total_power
       page_id:   page_1
@@ -21,7 +21,7 @@ packages:
       entity_id: "sensor.total_power"
 
   p1_total_current: !include
-    file: ../buttons/current_display_large.yaml
+    file: ../components/display/current_display_large.yaml
     vars:
       uid:       p1_total_current
       page_id:   page_1
@@ -31,7 +31,7 @@ packages:
       entity_id: "sensor.total_current"
 
   p1_backlight: !include
-    file: ../buttons/switch_button_large.yaml
+    file: ../components/buttons/switch_button_large.yaml
     vars:
       uid:       p1_backlight
       page_id:   page_1
@@ -42,7 +42,7 @@ packages:
       entity_id: "light.guition_4848s040_display_backlight"
 
   snug_lamp: !include
-    file: ../buttons/switch_button_large.yaml
+    file: ../components/buttons/switch_button_large.yaml
     vars:
       uid:       snug_lamp
       page_id:   page_1
@@ -53,7 +53,7 @@ packages:
       entity_id: "light.snug_outlet_snug_light"
 
   table_lamp: !include
-    file: ../buttons/switch_button_large.yaml
+    file: ../components/buttons/switch_button_large.yaml
     vars:
       uid:       table_lamp
       page_id:   page_1
@@ -64,7 +64,7 @@ packages:
       entity_id: "light.table_lamp"
 
   p1_kitchen_temp: !include
-    file: ../buttons/temp_display_large.yaml
+    file: ../components/display/temp_display_large.yaml
     vars:
       uid:       p1_kitchen_temp
       page_id:   page_1
@@ -74,7 +74,7 @@ packages:
       entity_id: "climate.kitchen"
 
   p1_snug_temp: !include
-    file: ../buttons/temp_display_large.yaml
+    file: ../components/display/temp_display_large.yaml
     vars:
       uid:       p1_snug_temp
       page_id:   page_1
@@ -84,7 +84,7 @@ packages:
       entity_id: "climate.snug"
 
   p1_bedroom_temp: !include
-    file: ../buttons/temp_display_large.yaml
+    file: ../components/display/temp_display_large.yaml
     vars:
       uid:       p1_bedroom_temp
       page_id:   page_1
