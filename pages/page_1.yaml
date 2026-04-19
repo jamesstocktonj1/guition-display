@@ -53,7 +53,7 @@ packages:
       entity_id: "light.snug_outlet_snug_light"
 
   table_lamp: !include
-    file: ../components/buttons/switch_button_large.yaml
+    file: ../components/buttons/slider_button_large.yaml
     vars:
       uid:       table_lamp
       page_id:   page_1
